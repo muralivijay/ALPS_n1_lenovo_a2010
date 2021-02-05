@@ -29,6 +29,7 @@ ifeq ($(TARGET_BUILD_VARIANT),eng)
 else
     PRODUCT_COPY_FILES += device/lenovo/a2010/thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/thermal.conf:mtk
 endif
+PRODUCT_COPY_FILES += device/lenovo/a2010/ht120.mtc:$(TARGET_COPY_OUT_VENDOR)/etc/.tp/.ht120.mtc:mtk
 
 # alps/vendor/mediatek/proprietary/external/GeoCoding/Android.mk
 
