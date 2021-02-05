@@ -48,6 +48,11 @@
 #define LCD_DEBUG(fmt)  printk(fmt)
 #endif
 
+/* Lenovo A2010 LCM */
+extern LCM_DRIVER ili9806e_hlt_hd720_dsi_lcm_drv;
+extern LCM_DRIVER ili9806e_yaxin_dsi_lcm_drv;
+
+/* Others */
 extern LCM_DRIVER hx8394f_hd720_dsi_vdo_lide_lcm_drv;
 extern LCM_DRIVER otm1282a_hd720_dsi_vdo_60hz_lcm_drv;
 extern LCM_DRIVER otm1282a_hd720_dsi_vdo_lcm_drv;
@@ -300,7 +305,15 @@ extern LCM_DRIVER db7400_hd720_dsi_vdo_dongbu_m4_drv;
 extern LCM_DRIVER lh570_hd720_dsi_vdo_lgd_phase3_drv;
 
 LCM_DRIVER *lcm_driver_list[] = {
-	
+
+#if defined(ILI9806E_YAXIN_DSI)
+    &ili9806e_yaxin_dsi_lcm_drv,
+#endif
+
+#if defined(ILI9806E_HLT_HD720_DSI)
+    &ili9806e_hlt_hd720_dsi_lcm_drv,
+#endif
+
 #if defined(HX8394F_HD720_DSI_VDO_LIDE)
 	&hx8394f_hd720_dsi_vdo_lide_lcm_drv,
 #endif
