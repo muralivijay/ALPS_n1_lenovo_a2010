@@ -4,7 +4,8 @@ include device/lenovo/$(MTK_TARGET_PROJECT)/ProjectConfig.mk
 # PRODUCT_COPY_FILES += device/lenovo/a2010/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg:mtk
 # PRODUCT_COPY_FILES += device/lenovo/a2010/ueventd.mt6735.rc:root/ueventd.mt6735.rc
 
-PRODUCT_COPY_FILES += device/lenovo/a2010/factory_init.project.rc:root/factory_init.project.rc
+PRODUCT_COPY_FILES += device/lenovo/a2010/factory_init.project.rc:root/factory_init.project.rc 
+PRODUCT_COPY_FILES += device/lenovo/a2010/enableswap.sh:root/enableswap.sh #Zram
 PRODUCT_COPY_FILES += device/lenovo/a2010/init.project.rc:root/init.project.rc
 PRODUCT_COPY_FILES += device/lenovo/a2010/meta_init.project.rc:root/meta_init.project.rc
 
